@@ -1,0 +1,219 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.netWorthCalculator {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.table {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 550px; /* Ancho fijo de la tabla */
+  text-align: center;
+}
+
+.tableTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.summary,
+.currency {
+  margin-top: 1em;
+  text-align: center;
+}
+
+.summaryItem {
+  display: flex;
+  width: 250px;
+  justify-content: space-between;
+}
+
+.tableContainer {
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.tableHeader {
+  position: sticky;
+  top: 0;
+  background-color: #f5f5f5;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.tableCell {
+  flex: 1;
+  font-weight: bold;
+  padding: 8px;
+}
+
+.tableRow {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.tableInput {
+  flex: 1;
+  margin-right: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.addButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.deleteButton {
+  border: none;
+  background-color: transparent;
+  color: #ff4f4f;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.deleteButton:hover {
+  color: #ff1f1f;
+}
+
+.total {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.total h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.total p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.clearButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #ff4f4f;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.clearButton:hover {
+  background-color: #ff1f1f;
+}
+
+.inputSymbol {
+  transform: translateY(-10%);
+  margin-right: 0.5em;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+  .netWorthCalculator {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .table {
+    width: 100%;
+  }
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+.totalNetWorth .green,
+.totalNetWorthUSD .green {
+  color: green;
+}
+
+.totalNetWorth .red,
+.totalNetWorthUSD .red {
+  color: red;
+}
+
+.selectContainer {
+  position: relative;
+}
+
+.select {
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.select:disabled {
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+.selectArrow {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.selectArrow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-left: 0.3em solid transparent;
+  border-right: 0.3em solid transparent;
+  border-top: 0.3em solid #000;
+}
